@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="제품과 브랜드에 관한 문의를 온고뷰티에 남겨주세요.">
+  <meta name="description" content="이메일, 인스타그램, 스마트스토어에서 온고뷰티와 바로 이야기해 보세요.">
   <title>연락하기 | 온고뷰티</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600&family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css"><script src="script.js" defer></script>
 </head>
 <body>
@@ -15,24 +15,37 @@
   <nav class="mobile-menu" id="mobile-menu" aria-label="모바일 메뉴" hidden><a href="index.html">홈</a><a href="about.html">내 소개</a><a href="products.html">제품</a><a href="story/">이야기</a><a href="contact.html" aria-current="page">연락하기</a></nav>
 
   <main id="main">
-    <section class="page-hero contact-page-hero"><div><p class="eyebrow">CONTACT US</p><h1>궁금한 이야기를<br><em>편하게 들려주세요.</em></h1></div><p class="page-intro">제품 선택부터 입점과 협업까지, 온고뷰티에 궁금한 점을 남겨주세요. 확인 후 영업일 기준 2–3일 안에 답변드릴 예정입니다.</p></section>
-    <section class="contact-section section-shell">
-      <aside class="contact-details" data-reveal>
-        <p class="section-label">연락처</p><h2>온고뷰티와<br>이야기 나누기</h2>
-        <dl><div><dt>이메일</dt><dd><a href="mailto:hello@ongobeauty.kr">hello@ongobeauty.kr</a></dd></div><div><dt>운영 시간</dt><dd>평일 10:00–17:00<br>주말·공휴일 휴무</dd></div><div><dt>소셜</dt><dd><span>@ongobeauty</span></dd></div></dl>
-        <p class="placeholder-note">현재 표시된 연락처와 운영 정보는 임시 내용입니다. 실제 정보가 정해지면 바꿔 주세요.</p>
-      </aside>
-      <form class="contact-form" data-contact-form data-reveal>
-        <div class="form-row"><label for="name">이름 <span aria-hidden="true">*</span></label><input id="name" name="name" type="text" autocomplete="name" required></div>
-        <div class="form-row"><label for="email">이메일 <span aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" required></div>
-        <div class="form-row"><label for="topic">문의 유형</label><select id="topic" name="topic"><option>제품 문의</option><option>구매 및 배송 문의</option><option>입점 및 협업 문의</option><option>기타 문의</option></select></div>
-        <div class="form-row"><label for="message">문의 내용 <span aria-hidden="true">*</span></label><textarea id="message" name="message" rows="7" placeholder="궁금한 내용을 자유롭게 적어 주세요." required></textarea></div>
-        <label class="consent"><input type="checkbox" required><span>문의 답변을 위한 개인정보 수집에 동의합니다. <small>(임시 문구)</small></span></label>
-        <button class="button button-primary" type="submit">문의 남기기</button>
-        <p class="form-status" data-form-status role="status" aria-live="polite"></p>
-      </form>
+    <section class="page-hero contact-page-hero">
+      <div><p class="eyebrow">CONTACT US</p><h1>가장 편한 곳에서<br><em>바로 이야기해요.</em></h1></div>
+      <p class="page-intro">제품 선택과 사용, A/S, 입점과 협업까지. 필요한 이야기에 맞는 연락처를 선택해 주세요.</p>
+    </section>
+
+    <section class="contact-directory section-shell" aria-labelledby="contact-directory-title">
+      <div class="contact-directory-intro" data-reveal>
+        <p class="section-label">연락처</p>
+        <h2 id="contact-directory-title">세 가지 길을<br>열어두었습니다.</h2>
+        <p>각 버튼을 누르면 해당 연락처가 새 탭에서 열립니다.</p>
+      </div>
+
+      <div class="contact-channel-list" data-reveal>
+        <a class="contact-channel" href="mailto:kkk1615@naver.com" target="_blank" rel="noopener" aria-label="새 탭에서 kkk1615@naver.com으로 이메일 보내기">
+          <span class="contact-channel-label">이메일</span>
+          <strong>kkk1615@naver.com</strong>
+          <span class="contact-channel-action">이메일 보내기</span>
+        </a>
+        <a class="contact-channel" href="https://www.instagram.com/rich2030/" target="_blank" rel="noopener" aria-label="새 탭에서 rich2030 인스타그램 열기">
+          <span class="contact-channel-label">SNS</span>
+          <strong>rich2030@instagram.com</strong>
+          <span class="contact-channel-action">인스타그램 열기</span>
+        </a>
+        <a class="contact-channel" href="https://smartstore.naver.com/rgoline" target="_blank" rel="noopener" aria-label="새 탭에서 온고뷰티 스마트스토어 열기">
+          <span class="contact-channel-label">스토어</span>
+          <strong>온고뷰티 스마트스토어</strong>
+          <span class="contact-channel-action">스토어 방문하기</span>
+        </a>
+      </div>
     </section>
   </main>
-  <footer class="site-footer"><div class="footer-brand"><span class="brand-mark" aria-hidden="true">온</span><strong>온고뷰티</strong></div><p>매일 닿는 온도까지, 머릿결을 생각합니다.</p><div class="footer-links"><a href="about.html">내 소개</a><a href="products.html">제품</a><a href="story/">이야기</a><a href="contact.html">연락하기</a></div><small>© <span data-year>2026</span> ONGO BEAUTY. All rights reserved.</small></footer>
+  <footer class="site-footer"><div class="footer-brand"><span class="brand-mark" aria-hidden="true">온</span><strong>온고뷰티</strong></div><p>매일 닿는 온도까지, 머릿결을 생각합니다.</p><div class="footer-links"><a href="about.html">내 소개</a><a href="products.html">제품</a><a href="story/">이야기</a><a href="contact.html">연락하기</a></div><div class="footer-contact" aria-label="온고뷰티 연락처"><a href="mailto:kkk1615@naver.com" target="_blank" rel="noopener">이메일 · kkk1615@naver.com</a><a href="https://www.instagram.com/rich2030/" target="_blank" rel="noopener">SNS · rich2030@instagram.com</a></div><small>© <span data-year>2026</span> ONGO BEAUTY. All rights reserved.</small></footer>
 </body>
 </html>
