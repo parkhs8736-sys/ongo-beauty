@@ -7,7 +7,7 @@
   <title>제품 | 온고뷰티</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
@@ -25,34 +25,24 @@
     <section class="page-hero product-page-hero">
       <div>
         <p class="eyebrow">OUR PRODUCTS</p>
-        <h1>당신의 일상에 맞는<br><em>세 가지 온도.</em></h1>
+        <h1>한 번의 손질을 위한<br><em>집요한 기술.</em></h1>
       </div>
-      <p class="page-intro">말리기, 펴기, 컬 만들기. 필요한 기능은 분명하게, 사용감은 편안하게 담았습니다. 아래 제품명과 사양은 출시 전 임시 내용입니다.</p>
+      <p class="page-intro">전문 헤어샵에서 사용하는 매직기부터 매일 빠르게 손질하는 드라이기까지. 온고뷰티 공식 스마트스토어 제품을 한곳에서 확인하세요.</p>
     </section>
 
     <figure class="collection-visual" data-reveal>
-      <img src="assets/ongo-beauty-product-hero.png" alt="아이보리와 구리빛으로 디자인된 온고뷰티 매직기, 고데기, 헤어드라이기">
+      <img src="assets/ongo-beauty-product-hero.png" alt="온고뷰티 매직기와 고데기, 헤어드라이기 컬렉션">
     </figure>
 
-    <section class="product-catalog section-shell" aria-label="온고뷰티 제품 목록">
-      <article class="catalog-item" data-reveal>
-        <div class="catalog-number">01</div>
-        <div class="catalog-title"><p class="product-category">STRAIGHTENER</p><h2>온고 글로우 매직기</h2><p>차분한 결, 자연스러운 윤기를 위한 데일리 스트레이트너</p></div>
-        <dl class="spec-list"><div><dt>온도</dt><dd>140–200°C 4단계</dd></div><div><dt>플레이트</dt><dd>세라믹 코팅</dd></div><div><dt>색상</dt><dd>포슬린 아이보리</dd></div></dl>
-        <a class="button button-outline" href="contact.html">출시 소식 문의</a>
-      </article>
-      <article class="catalog-item" data-reveal>
-        <div class="catalog-number">02</div>
-        <div class="catalog-title"><p class="product-category">CURLING IRON</p><h2>온고 소프트 컬 고데기</h2><p>힘을 주지 않아도 자연스러운 흐름을 만드는 라운드 고데기</p></div>
-        <dl class="spec-list"><div><dt>온도</dt><dd>150–210°C 4단계</dd></div><div><dt>배럴</dt><dd>32 mm</dd></div><div><dt>색상</dt><dd>웜 코퍼</dd></div></dl>
-        <a class="button button-outline" href="contact.html">출시 소식 문의</a>
-      </article>
-      <article class="catalog-item" data-reveal>
-        <div class="catalog-number">03</div>
-        <div class="catalog-title"><p class="product-category">HAIR DRYER</p><h2>온고 에어리 드라이기</h2><p>가볍고 부드러운 바람으로 빠르게 완성하는 데일리 드라이어</p></div>
-        <dl class="spec-list"><div><dt>바람</dt><dd>3단계 풍속 조절</dd></div><div><dt>모드</dt><dd>온풍 · 냉풍</dd></div><div><dt>색상</dt><dd>소프트 샌드</dd></div></dl>
-        <a class="button button-outline" href="contact.html">출시 소식 문의</a>
-      </article>
+    <section class="product-catalog section-shell" aria-labelledby="catalog-heading">
+      <header class="catalog-heading" data-reveal>
+        <div><p class="section-label">OFFICIAL STORE</p><h2 id="catalog-heading">지금 만날 수 있는 제품</h2></div>
+        <p><span data-product-count>제품</span> · 구매 버튼을 누르면 온고뷰티 스마트스토어가 새 창에서 열립니다.</p>
+      </header>
+      <div class="product-grid catalog-product-grid" data-product-list data-reveal>
+        <p class="product-state">제품을 불러오는 중입니다.</p>
+      </div>
+      <noscript><p class="product-state">제품 목록을 보려면 자바스크립트를 활성화해 주세요.</p></noscript>
     </section>
 
     <section class="product-help section-shell" data-reveal>
