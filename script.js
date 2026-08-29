@@ -67,6 +67,7 @@ const createProductCard = (product, index) => {
   imageWrap.className = 'store-product-image';
 
   const image = document.createElement('img');
+  image.referrerPolicy = 'no-referrer';
   image.src = product.image;
   image.alt = product.name;
   image.loading = index < 2 ? 'eager' : 'lazy';

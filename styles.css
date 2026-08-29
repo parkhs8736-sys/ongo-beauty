@@ -346,20 +346,10 @@ p { max-width: 40ch; }
 }
 .founder-hero-copy h1 { max-width: 12ch; font-size: clamp(2.8rem, 5.5vw, 6.3rem); }
 .founder-hero-copy > p:last-child { margin-top: 2rem; color: rgba(28, 26, 23, .7); }
-.founder-photo-slot > div {
-  position: relative; display: grid; aspect-ratio: 4 / 5; place-content: center;
-  overflow: hidden; background: var(--ink); color: var(--cream); text-align: center;
+.founder-photo-slot > img {
+  width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center;
+  background: var(--ink);
 }
-.founder-photo-slot > div::before, .founder-photo-slot > div::after {
-  position: absolute; background: var(--copper); content: "";
-}
-.founder-photo-slot > div::before { top: 0; left: 50%; width: 1px; height: 100%; }
-.founder-photo-slot > div::after { top: 50%; left: 0; width: 100%; height: 1px; }
-.founder-photo-slot span, .founder-photo-slot small {
-  position: relative; z-index: 1; background: var(--ink); padding: .4rem 1rem;
-}
-.founder-photo-slot span { font-family: var(--display); font-size: 1.2rem; }
-.founder-photo-slot small { color: var(--copper); font-size: .6rem; letter-spacing: .15em; }
 .founder-photo-slot figcaption { margin-top: .8rem; color: rgba(28, 26, 23, .55); font-size: .7rem; }
 .founder-story, .development-story {
   display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(4rem, 10vw, 10rem); border-bottom: var(--line);
