@@ -305,13 +305,45 @@ h1 em { color: var(--copper); font-style: normal; }
 .page-hero h1 { margin-bottom: 0; font-size: clamp(3.4rem, 6vw, 6.5rem); }
 .page-intro { margin: 0 0 0.8rem; color: var(--muted); font-size: 1.02rem; line-height: 1.95; }
 
-.meaning-section { display: grid; grid-template-columns: 0.75fr 1.25fr; gap: clamp(3rem, 10vw, 10rem); align-items: center; background: var(--paper-light); }
-.meaning-mark { min-height: 460px; padding: 2rem; display: flex; align-items: center; justify-content: center; gap: 0.75rem; color: var(--paper); background: var(--copper); }
-.meaning-mark span { font-family: var(--display); font-size: clamp(5.5rem, 11vw, 9rem); line-height: 1; }
-.meaning-mark span + span { opacity: 0.45; }
-.meaning-copy h2,
-.values-section h2,
-.founder-note blockquote,
+.founder-hero {
+  min-height: calc(100svh - 88px);
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(3rem, 8vw, 7rem);
+  align-items: center;
+}
+.founder-hero-copy h1 {
+  max-width: 800px;
+  margin: 1.3rem 0 1.75rem;
+  font-size: clamp(3.4rem, 6.3vw, 6.8rem);
+  line-height: 1.14;
+  font-weight: 400;
+  letter-spacing: -0.06em;
+}
+.founder-hero-copy h1 em { color: var(--copper); font-style: normal; }
+.founder-hero-copy > p:last-child { max-width: 600px; color: var(--muted); font-size: 1.02rem; line-height: 1.95; }
+.founder-photo-slot { margin: 0; }
+.founder-photo-slot > div {
+  min-height: 560px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgba(48,43,39,0.62);
+  background: #dfd3c8;
+  border: 1px solid rgba(48,43,39,0.14);
+}
+.founder-photo-slot span { font-family: var(--display); font-size: 2rem; }
+.founder-photo-slot i { width: 1px; height: 100px; margin: 1.2rem 0; background: rgba(48,43,39,0.28); }
+.founder-photo-slot small { font-size: 0.62rem; letter-spacing: 0.18em; }
+.founder-photo-slot figcaption { padding-top: 0.75rem; color: var(--muted); font-size: 0.7rem; }
+
+.founder-story { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: clamp(3rem, 10vw, 10rem); background: var(--paper-light); }
+.story-intro h2,
+.development-copy h2,
+.brand-history h2,
+.founder-promise h2,
 .product-help h2,
 .contact-details h2 {
   margin: 1rem 0 1.5rem;
@@ -321,19 +353,38 @@ h1 em { color: var(--copper); font-style: normal; }
   font-weight: 400;
   letter-spacing: -0.045em;
 }
-.meaning-copy > p:not(.section-label) { max-width: 660px; color: var(--muted); line-height: 1.95; }
-.meaning-copy strong { color: var(--ink); }
-.values-section { background: #eee6dc; }
-.value-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--ink); }
-.value-grid article { min-height: 300px; padding: 2.5rem; border-right: 1px solid var(--line); }
-.value-grid article:last-child { border-right: 0; }
-.value-grid article > span { color: var(--copper); font-family: var(--display); font-size: 0.9rem; }
-.value-grid h3 { margin: 3rem 0 1rem; font-size: 1.6rem; font-weight: 400; }
-.value-grid p { margin: 0; color: var(--muted); line-height: 1.85; }
-.founder-note { text-align: center; background: var(--paper-light); }
-.founder-note blockquote { margin-right: auto; margin-left: auto; max-width: 900px; }
-.founder-note > p:not(.section-label) { max-width: 680px; margin: 0 auto 1.5rem; color: var(--muted); line-height: 1.9; }
-.founder-note cite { color: var(--copper); font-family: var(--display); font-style: normal; }
+.story-prose { padding-top: 0.25rem; }
+.story-prose p,
+.development-copy > p:not(.section-label) { margin: 0 0 1.5rem; color: var(--muted); font-size: 1.02rem; line-height: 2; }
+.story-prose strong,
+.development-copy strong { color: var(--ink); font-weight: 600; }
+
+.development-story { display: grid; grid-template-columns: 0.72fr 1.28fr; gap: clamp(3rem, 10vw, 10rem); align-items: center; background: #eee6dc; }
+.development-label { min-height: 520px; padding: 3rem; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--paper-light); background: var(--copper); }
+.development-label span { font-family: var(--display); font-size: clamp(8rem, 18vw, 15rem); line-height: 0.8; letter-spacing: -0.08em; }
+.development-label small { margin-top: 2.4rem; font-size: 0.68rem; letter-spacing: 0.16em; }
+.non-negotiable { margin-top: 3rem; padding: 1.8rem 0 0; border-top: 1px solid var(--ink); }
+.non-negotiable span { display: block; margin-bottom: 0.7rem; color: var(--copper); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; }
+.non-negotiable strong { display: block; font-family: var(--display); font-size: clamp(1.6rem, 2.8vw, 2.6rem); line-height: 1.55; font-weight: 400; }
+
+.customer-quote { margin: 0; display: grid; grid-template-columns: 1.3fr 0.7fr; gap: clamp(3rem, 8vw, 7rem); color: var(--paper-light); background: var(--sage); }
+.customer-quote blockquote { margin: 0; font-family: var(--display); font-size: clamp(2.4rem, 4.5vw, 4.6rem); line-height: 1.5; letter-spacing: -0.045em; }
+.customer-quote figcaption { align-self: end; }
+.customer-quote figcaption span { color: rgba(255,255,255,0.62); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; }
+.customer-quote figcaption p { margin: 1.2rem 0 0; color: rgba(255,255,255,0.78); line-height: 1.9; }
+
+.brand-history { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: clamp(3rem, 10vw, 10rem); background: var(--paper-light); }
+.history-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--ink); }
+.history-list li { padding: 2rem 0; display: grid; grid-template-columns: 135px 1fr; gap: 1.5rem; border-bottom: 1px solid var(--line); }
+.history-list time,
+.history-list li > span { color: var(--copper); font-family: var(--display); font-size: 1rem; }
+.history-list h3 { margin: 0 0 0.6rem; font-size: 1.35rem; font-weight: 400; }
+.history-list p { margin: 0; color: var(--muted); font-size: 0.86rem; line-height: 1.8; }
+
+.founder-promise { text-align: center; color: var(--paper-light); background: var(--copper); }
+.founder-promise .section-label { color: rgba(255,255,255,0.68); }
+.founder-promise h2 { max-width: 1000px; margin-right: auto; margin-left: auto; }
+.founder-promise .button { margin-top: 1rem; }
 
 .collection-visual { width: min(100% - 3rem, 1240px); margin: 0 auto 2rem; overflow: hidden; background: #ead3c5; }
 .collection-visual img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
@@ -420,11 +471,18 @@ a:focus-visible { outline: 3px solid var(--copper); outline-offset: 4px; }
   .site-footer { grid-template-columns: 1fr; }
   .site-footer small { grid-column: 1; }
   .page-hero { min-height: auto; padding: 5rem 0; grid-template-columns: 1fr; align-items: start; }
-  .meaning-section,
+  .founder-hero,
+  .founder-story,
+  .development-story,
+  .customer-quote,
+  .brand-history,
   .journal-feature,
   .contact-section { grid-template-columns: 1fr; }
-  .value-grid { grid-template-columns: 1fr; }
-  .value-grid article { min-height: auto; border-right: 0; border-bottom: 1px solid var(--line); }
+  .founder-hero { min-height: auto; }
+  .founder-photo-slot > div { min-height: 480px; }
+  .development-label { min-height: 360px; }
+  .development-label span { font-size: 10rem; }
+  .customer-quote figcaption { max-width: 650px; }
   .catalog-item { grid-template-columns: 60px 1fr; }
   .catalog-item .spec-list,
   .catalog-item .button { grid-column: 2; }
@@ -448,7 +506,12 @@ a:focus-visible { outline: 3px solid var(--copper); outline-offset: 4px; }
   .footer-links { flex-wrap: wrap; }
   .page-hero { width: min(100% - 2rem, 1240px); padding-top: 4rem; }
   .page-hero h1 { font-size: clamp(2.8rem, 14vw, 4.2rem); }
-  .meaning-mark { min-height: 330px; }
+  .founder-hero-copy h1 { font-size: clamp(2.8rem, 13.5vw, 4.2rem); }
+  .founder-photo-slot > div { min-height: 390px; }
+  .development-label { min-height: 300px; }
+  .development-label span { font-size: 8rem; }
+  .customer-quote blockquote { font-size: clamp(2rem, 9vw, 3rem); }
+  .history-list li { grid-template-columns: 1fr; gap: 0.8rem; }
   .collection-visual { width: calc(100% - 2rem); }
   .catalog-item { grid-template-columns: 1fr; gap: 1.25rem; }
   .catalog-item .spec-list,
