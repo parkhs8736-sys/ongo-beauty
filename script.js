@@ -26,20 +26,54 @@ document.querySelectorAll('[data-year]').forEach((element) => {
   element.textContent = new Date().getFullYear();
 });
 
-const revealElements = document.querySelectorAll('[data-reveal]');
+const counterElements = document.querySelectorAll('[data-counter]');
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const heroVideo = document.querySelector('.hero-video');
 
-if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  const revealObserver = new IntersectionObserver((entries, observer) => {
+if (heroVideo && reducedMotion) {
+  heroVideo.removeAttribute('autoplay');
+  heroVideo.pause();
+  heroVideo.currentTime = 0;
+}
+
+const setCounterValue = (element, value) => {
+  const suffix = element.dataset.suffix || '';
+  element.textContent = `${new Intl.NumberFormat('ko-KR').format(value)}${suffix}`;
+};
+
+const runCounter = (element) => {
+  const target = Number.parseInt(element.dataset.counter || '', 10);
+  if (!Number.isFinite(target)) return;
+  if (reducedMotion) {
+    setCounterValue(element, target);
+    return;
+  }
+
+  const duration = target > 100 ? 1200 : 850;
+  const startedAt = performance.now();
+  const tick = (now) => {
+    const progress = Math.min((now - startedAt) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    setCounterValue(element, Math.round(target * eased));
+    if (progress < 1) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+};
+
+if ('IntersectionObserver' in window && !reducedMotion) {
+  const counterObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
-      entry.target.classList.add('is-visible');
+      runCounter(entry.target);
       observer.unobserve(entry.target);
     });
-  }, { threshold: 0.12 });
-
-  revealElements.forEach((element) => revealObserver.observe(element));
+  }, { threshold: 0.45 });
+  counterElements.forEach((element) => {
+    setCounterValue(element, 0);
+    counterObserver.observe(element);
+  });
 } else {
-  revealElements.forEach((element) => element.classList.add('is-visible'));
+  counterElements.forEach(runCounter);
 }
 
 const productLists = document.querySelectorAll('[data-product-list]');
@@ -51,6 +85,15 @@ const formatPrice = (price) => {
 
   if (typeof price === 'string' && price.trim()) return price.trim();
   return '스토어에서 확인';
+};
+
+const getCartPrice = (price) => {
+  if (typeof price === 'number' && Number.isFinite(price)) {
+    return Math.max(0, Math.round(price));
+  }
+
+  const parsed = Number.parseInt(String(price ?? '').replace(/[^0-9-]/g, ''), 10);
+  return Number.isFinite(parsed) ? Math.max(0, parsed) : 0;
 };
 
 const getProductType = (name) => {
@@ -99,15 +142,29 @@ const createProductCard = (product, index) => {
   price.className = 'store-product-price';
   price.textContent = formatPrice(product.price);
 
+  const actions = document.createElement('div');
+  actions.className = 'store-product-actions';
+
+  const cartButton = document.createElement('button');
+  cartButton.type = 'button';
+  cartButton.className = 'button button-primary store-cart-button';
+  cartButton.dataset.cartAdd = '';
+  cartButton.dataset.name = product.name;
+  cartButton.dataset.price = String(getCartPrice(product.price));
+  cartButton.dataset.url = product.url;
+  cartButton.textContent = '장바구니 담기';
+  cartButton.setAttribute('aria-label', `${product.name} 장바구니 담기`);
+
   const buyLink = document.createElement('a');
-  buyLink.className = 'button button-primary store-buy-button';
+  buyLink.className = 'button button-secondary store-buy-button';
   buyLink.href = product.url;
   buyLink.target = '_blank';
   buyLink.rel = 'noopener noreferrer';
   buyLink.textContent = '구매하기';
   buyLink.setAttribute('aria-label', `${product.name} 구매하기 (새 탭)`);
 
-  body.append(meta, title, price, buyLink);
+  actions.append(cartButton, buyLink);
+  body.append(meta, title, price, actions);
   article.append(imageWrap, body);
   return article;
 };

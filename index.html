@@ -14,8 +14,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600&family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="assets/products/magic-mirror2-hero.png">
+  <link rel="preload" as="video" href="assets/hero-scrub.mp4" type="video/mp4">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets/cart.css">
   <script src="script.js" defer></script>
 </head>
 <body class="home-page">
@@ -48,7 +49,10 @@
 
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
-      <img class="hero-image" src="assets/products/magic-mirror2-hero.png" alt="그리에이트 티타늄 매직미러2 전문가용 매직기" width="1000" height="1000" fetchpriority="high">
+      <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg" aria-hidden="true">
+        <source src="assets/hero-scrub-m.mp4" type="video/mp4" media="(max-width: 600px)">
+        <source src="assets/hero-scrub.mp4" type="video/mp4">
+      </video>
       <div class="hero-scrim" aria-hidden="true"></div>
       <div class="hero-copy">
         <p class="eyebrow">PROFESSIONAL HAIR TOOLS · SINCE 1992</p>
@@ -61,10 +65,10 @@
       </div>
     </section>
 
-    <section class="trust-strip" aria-label="온고뷰티가 지키는 기준">
-      <p><strong>섬세한 온도</strong><span>모발 상태에 맞춘 단계별 조절</span></p>
-      <p><strong>편안한 사용</strong><span>매일 손이 가는 가벼운 설계</span></p>
-      <p><strong>오래 가는 기본</strong><span>일상에 잘 어울리는 단정한 디자인</span></p>
+    <section class="trust-strip" aria-label="온고뷰티 기술 숫자">
+      <p><strong data-counter="1992">1992</strong><span>헤어 도구 제조 시작</span></p>
+      <p><strong data-counter="10" data-suffix="초">10초</strong><span>200℃까지 빠른 예열</span></p>
+      <p><strong data-counter="200" data-suffix="℃">200℃</strong><span>프로 스타일링 온도</span></p>
     </section>
 
     <section class="featured-section section-shell" aria-labelledby="featured-title">
@@ -165,5 +169,6 @@
     <div class="footer-contact" aria-label="온고뷰티 연락처"><a href="mailto:kkk1615@naver.com" target="_blank" rel="noopener">이메일 · kkk1615@naver.com</a><a href="https://www.instagram.com/rich2030/" target="_blank" rel="noopener">SNS · rich2030@instagram.com</a></div>
     <small>© <span data-year>2026</span> ONGO BEAUTY. All rights reserved.</small>
   </footer>
+  <script src="assets/cart.js" defer></script>
 </body>
 </html>
