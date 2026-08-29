@@ -142,6 +142,87 @@ const loadProducts = async () => {
 
 loadProducts();
 
+const storyLists = document.querySelectorAll('[data-story-list]');
+
+const formatStoryDate = (value) => {
+  const date = new Date(`${value}T00:00:00`);
+  if (Number.isNaN(date.getTime())) return value || '';
+  return new Intl.DateTimeFormat('ko-KR', {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).format(date).replace(/\.$/, '');
+};
+
+const getStoryUrl = (post) => {
+  if (!post.url) return `story/post.html?id=${encodeURIComponent(post.id || '')}`;
+  if (/^(?:https?:)?\/\//.test(post.url) || post.url.startsWith('/')) return post.url;
+  return `story/${post.url}`;
+};
+
+const createHomeStoryCard = (post, index) => {
+  const article = document.createElement('article');
+  article.className = `story-card${index === 1 ? ' story-card-accent' : ''}`;
+
+  const link = document.createElement('a');
+  link.href = getStoryUrl(post);
+
+  const label = document.createElement('span');
+  label.className = 'story-type';
+  label.textContent = 'ONGO JOURNAL';
+
+  const title = document.createElement('h3');
+  title.textContent = post.title || '(제목 없음)';
+
+  const summary = document.createElement('p');
+  summary.textContent = post.summary || '';
+
+  const time = document.createElement('time');
+  time.dateTime = post.date || '';
+  time.textContent = formatStoryDate(post.date);
+
+  link.append(label, title, summary, time);
+  article.append(link);
+  return article;
+};
+
+const loadStories = async () => {
+  if (!storyLists.length) return;
+
+  try {
+    const response = await fetch('story/posts.json', { cache: 'no-store' });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+    const posts = await response.json();
+    if (!Array.isArray(posts)) throw new Error('Invalid post list');
+
+    const latestPosts = posts
+      .slice()
+      .sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')))
+      .slice(0, 3);
+
+    storyLists.forEach((list) => {
+      if (!latestPosts.length) {
+        const state = document.createElement('p');
+        state.className = 'story-state';
+        state.textContent = '첫 번째 이야기를 준비하고 있습니다.';
+        list.replaceChildren(state);
+        return;
+      }
+      list.replaceChildren(...latestPosts.map(createHomeStoryCard));
+    });
+  } catch (error) {
+    storyLists.forEach((list) => {
+      const state = document.createElement('p');
+      state.className = 'story-state';
+      state.textContent = '최신 이야기를 불러오지 못했습니다. 잠시 후 다시 확인해 주세요.';
+      list.replaceChildren(state);
+    });
+  }
+};
+
+loadStories();
+
 const contactForm = document.querySelector('[data-contact-form]');
 
 if (contactForm) {
