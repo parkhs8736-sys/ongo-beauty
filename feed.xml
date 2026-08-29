@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>온고뷰티 이야기</title>
+    <link>https://parkhs8736-sys.github.io/ongo-beauty/story/</link>
+    <description>온고뷰티가 헤어 도구를 만들며 발견한 생각과 머릿결 관리 기록</description>
+    <language>ko-KR</language>
+    <lastBuildDate>Sat, 29 Aug 2026 00:00:00 +0900</lastBuildDate>
+    <atom:link href="https://parkhs8736-sys.github.io/ongo-beauty/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>우리가 이 브랜드를 시작한 이유</title>
+      <link>https://parkhs8736-sys.github.io/ongo-beauty/story/why-we-started.html</link>
+      <description>작은 불편에서 시작된 고민이 어떻게 하나의 브랜드가 되었는지, 그 첫 마음을 기록합니다.</description>
+      <pubDate>Thu, 20 Aug 2026 00:00:00 +0900</pubDate>
+      <guid isPermaLink="true">https://parkhs8736-sys.github.io/ongo-beauty/story/why-we-started.html</guid>
+    </item>
+    <item>
+      <title>패키지 하나를 바꾸는 데 석 달이 걸린 이야기</title>
+      <link>https://parkhs8736-sys.github.io/ongo-beauty/story/package-change-story.html</link>
+      <description>고객의 한 줄 후기에서 시작된 패키지 개선 프로젝트. 사소해 보이는 디테일에 오래 머문 이유를 적었습니다.</description>
+      <pubDate>Fri, 14 Aug 2026 00:00:00 +0900</pubDate>
+      <guid isPermaLink="true">https://parkhs8736-sys.github.io/ongo-beauty/story/package-change-story.html</guid>
+    </item>
+  </channel>
+</rss>

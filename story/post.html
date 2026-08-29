@@ -4,14 +4,16 @@
   <meta charset="utf-8">
   <meta name="google-site-verification" content="wx0DyU8hNhCQ1YkHGSqaNByI2j18Ryf8jRu1ZCoJjWM">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link rel="canonical" href="">
+  <meta name="description" content="온고뷰티가 헤어 도구를 만들며 발견한 생각과 제품 뒤의 이야기를 읽는 상세 페이지입니다.">
+  <meta name="author" content="온고뷰티 대표">
+  <meta name="robots" content="noindex,follow">
+  <link rel="canonical" href="https://parkhs8736-sys.github.io/ongo-beauty/story/post.html">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="">
-  <meta property="og:description" content="">
-  <meta property="og:url" content="">
-  <title>이야기 | 온고뷰티</title>
+  <meta property="og:title" content="온고뷰티 이야기 글 보기">
+  <meta property="og:description" content="온고뷰티가 헤어 도구를 만들며 발견한 생각과 제품 뒤의 이야기를 읽어보세요.">
+  <meta property="og:url" content="https://parkhs8736-sys.github.io/ongo-beauty/story/post.html">
+  <meta property="og:image" content="https://parkhs8736-sys.github.io/ongo-beauty/assets/og-modern.png">
+  <title>온고뷰티 이야기 글 보기</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600&family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -111,7 +113,10 @@
     function setMeta(post){
       var title = String(post.title || '이야기');
       var description = String(post.description || post.summary || '').slice(0, 160);
-      var url = location.origin + location.pathname + '?id=' + encodeURIComponent(post.id || '');
+      var siteBase = 'https://parkhs8736-sys.github.io/ongo-beauty';
+      var url = post.url
+        ? new URL(String(post.url), siteBase + '/story/').href
+        : siteBase + '/story/post.html?id=' + encodeURIComponent(post.id || '');
       var author = String(post.author || '').trim();
       document.title = title + ' | 온고뷰티';
       setAttr('meta[name="description"]', 'content', description);
@@ -125,7 +130,9 @@
         '@context': 'https://schema.org', '@type': 'BlogPosting', headline: title,
         description: description, datePublished: String(post.date || ''),
         dateModified: String(post.updated || post.date || ''), mainEntityOfPage: url,
-        keywords: Array.isArray(post.tags) ? post.tags.map(String).join(', ') : ''
+        keywords: Array.isArray(post.tags) ? post.tags.map(String).join(', ') : '',
+        image: siteBase + '/assets/og-modern.png', inLanguage: 'ko-KR',
+        publisher: {'@id': siteBase + '/#organization'}
       };
       if (author) article.author = {'@type': 'Person', name: author};
       addLd(article);
@@ -136,6 +143,11 @@
           return {'@type': 'Question', name: String(item.q), acceptedAnswer: {'@type': 'Answer', text: String(item.a)}};
         })});
       }
+      addLd({'@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+        {'@type': 'ListItem', position: 1, name: '홈', item: siteBase + '/index.html'},
+        {'@type': 'ListItem', position: 2, name: '이야기', item: siteBase + '/story/'},
+        {'@type': 'ListItem', position: 3, name: title, item: url}
+      ]});
     }
 
     function renderFaq(items){

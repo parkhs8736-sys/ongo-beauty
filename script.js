@@ -38,7 +38,10 @@ if (heroVideo && reducedMotion) {
 
 const setCounterValue = (element, value) => {
   const suffix = element.dataset.suffix || '';
-  element.textContent = `${new Intl.NumberFormat('ko-KR').format(value)}${suffix}`;
+  const formattedValue = element.dataset.format === 'plain'
+    ? String(value)
+    : new Intl.NumberFormat('ko-KR').format(value);
+  element.textContent = `${formattedValue}${suffix}`;
 };
 
 const runCounter = (element) => {

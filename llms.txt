@@ -1,0 +1,35 @@
+# 온고뷰티
+
+온고뷰티는 남성·여성 머릿결 관리를 위한 고데기·매직기·헤어드라이기를 소개하는 헤어 도구 브랜드입니다.
+
+## 파는 것
+
+- 전문가용 티타늄 매직기와 판 고데기
+- 볼륨 스타일링을 위한 매직기
+- 미용실 전문가용 헤어드라이기
+- 제품 구매는 온고뷰티 네이버 스마트스토어에서 진행됩니다.
+
+## 브랜드 정보
+
+- 1992년부터 헤어 도구를 만들어왔습니다.
+- 국내에서 직접 제조하고 A/S를 제공합니다.
+- 머리카락이 끼지 않는 부드러운 사용감과 빠른 스타일링을 중요하게 생각합니다.
+
+## 페이지 안내
+
+- [홈](https://parkhs8736-sys.github.io/ongo-beauty/index.html): 온고뷰티 소개, 대표 제품, 고객 후기, 최신 이야기
+- [내 소개](https://parkhs8736-sys.github.io/ongo-beauty/about.html): 브랜드를 시작한 계기와 제품 개발 이야기, 연혁과 약속
+- [제품](https://parkhs8736-sys.github.io/ongo-beauty/products.html): 매직미러2·에어플렉스·매직라인 제품과 스마트스토어 구매 링크
+- [이야기](https://parkhs8736-sys.github.io/ongo-beauty/story/): 제품을 만들며 발견한 생각과 머릿결 관리 기록
+- [연락하기](https://parkhs8736-sys.github.io/ongo-beauty/contact.html): 이메일, 인스타그램, 스마트스토어 연락 채널
+
+## 이야기(블로그)
+
+- [우리가 이 브랜드를 시작한 이유](https://parkhs8736-sys.github.io/ongo-beauty/story/why-we-started.html): 작은 불편에서 시작된 고민과 온고뷰티가 지키고 싶은 기준
+- [패키지 하나를 바꾸는 데 석 달이 걸린 이야기](https://parkhs8736-sys.github.io/ongo-beauty/story/package-change-story.html): 고객의 한 줄 후기에서 시작된 패키지 개선 기록
+
+## 공식 채널
+
+- 스마트스토어: https://smartstore.naver.com/rgoline
+- 인스타그램: https://www.instagram.com/rich2030/
+- 이메일: kkk1615@naver.com

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /ongo-beauty/story/admin.html
+
+Sitemap: https://parkhs8736-sys.github.io/ongo-beauty/sitemap.xml
