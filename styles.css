@@ -465,18 +465,14 @@ p { max-width: 40ch; }
 .collection-visual {
   position: relative;
   width: 100%;
-  height: min(82vh, 900px);
+  height: auto;
+  aspect-ratio: 1672 / 941;
   overflow: hidden;
   border-bottom: var(--line);
   background: var(--black);
 }
-.collection-visual::after {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(0deg, rgba(46, 46, 46, .58), rgba(46, 46, 46, .12));
-  content: "";
-}
-.collection-visual img { width: 100%; height: 100%; object-fit: cover; object-position: center 58%; filter: saturate(.75) contrast(1.08); }
+.collection-visual picture { display: block; width: 100%; height: 100%; }
+.collection-visual img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
 .catalog-heading h2 { max-width: 14ch; }
 
 /* Founder */
@@ -707,8 +703,7 @@ p { max-width: 40ch; }
   .footer-contact { margin-top: 1.5rem; }
   .page-hero, .blog-hero, .founder-hero { min-height: calc(100svh - 64px); padding-block: max(5.5rem, 15vh); }
   .page-hero h1, .blog-hero h1 { max-width: 9ch; }
-  .collection-visual { height: 70vh; }
-  .collection-visual img { object-position: 54% center; }
+  .collection-visual { height: auto; aspect-ratio: 1122 / 1402; }
   .founder-hero-copy h1 { font-size: clamp(2.8rem, 12.5vw, 4.4rem); }
   .founder-story, .development-story, .brand-history, .contact-directory { gap: 4rem; }
   .story-prose p, .development-copy > p:not(.section-label) { font-size: 1rem; }
