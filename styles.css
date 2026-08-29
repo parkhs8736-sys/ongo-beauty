@@ -89,3 +89,26 @@
 .post-notfound h1{margin:0 0 1rem;font-size:clamp(2.5rem,6vw,4.5rem);font-weight:300;letter-spacing:-.06em}
 .post-notfound p{margin:0 auto 2rem;color:rgba(46,46,46,.65)}
 @media(max-width:600px){.post-wrap{width:calc(100% - 2rem)}.post-head h1{font-size:clamp(2.6rem,13vw,4rem)}.post-pn{grid-template-columns:1fr}.post-pn .next{text-align:left}}
+
+/* Official Magic Mirror 2 hero */
+.home-page .site-header{color:var(--charcoal);border-color:rgba(46,46,46,.16)}
+.home-page .hero{color:var(--charcoal);background:var(--white)}
+.home-page .hero-image{inset:auto 0 0 auto;width:min(62vw,900px);height:calc(100% - 80px);object-fit:contain;object-position:right bottom;filter:none}
+.home-page .hero-scrim{background:linear-gradient(90deg,var(--white) 0%,var(--white) 43%,rgba(255,255,255,.94) 56%,rgba(255,255,255,.42) 72%,rgba(255,255,255,0) 88%)}
+.home-page .hero-copy{width:min(54vw,780px)}
+.home-page .hero .eyebrow{color:var(--cobalt)}
+.home-page .hero h1{max-width:10ch}
+.home-page .text-link-light{color:var(--charcoal)}
+@media(max-width:600px){
+  .home-page .hero{padding:7rem 1rem 1rem;justify-content:flex-start}
+  .home-page .hero-image{inset:auto -22% -1% auto;width:118%;height:58%;object-position:right bottom}
+  .home-page .hero-scrim{background:linear-gradient(180deg,var(--white) 0%,var(--white) 46%,rgba(255,255,255,.94) 60%,rgba(255,255,255,.36) 78%,rgba(255,255,255,0) 100%)}
+  .home-page .hero-copy{width:100%}
+  .home-page .hero h1{max-width:9ch;font-size:clamp(3.2rem,14.8vw,4.5rem)}
+  .home-page .hero-lead{max-width:27ch;font-size:.86rem;line-height:1.75}
+  .home-page .hero-actions{align-items:center;flex-direction:row;gap:1rem}
+}
+
+/* Official product photography */
+.store-product-image img{filter:none}
+.store-product-card:nth-child(2) .store-product-image img{object-position:center 48%;transform:scale(1.12)}
