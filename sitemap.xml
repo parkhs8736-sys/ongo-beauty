@@ -25,10 +25,46 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://parkhs8736-sys.github.io/ongo-beauty/story/</loc>
+    <loc>https://parkhs8736-sys.github.io/ongo-beauty/stories.html</loc>
     <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://parkhs8736-sys.github.io/ongo-beauty/story/</loc>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://parkhs8736-sys.github.io/ongo-beauty/story/use-fast-heating-straightener.html</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://parkhs8736-sys.github.io/ongo-beauty/story/fast-preheat-morning-styling.html</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://parkhs8736-sys.github.io/ongo-beauty/story/titanium-vs-ceramic-straightener.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://parkhs8736-sys.github.io/ongo-beauty/story/how-to-choose-snag-free-straightener.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://parkhs8736-sys.github.io/ongo-beauty/story/why-hair-catches-in-straightener.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://parkhs8736-sys.github.io/ongo-beauty/story/why-we-started.html</loc>
