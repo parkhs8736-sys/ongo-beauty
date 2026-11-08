@@ -25,6 +25,7 @@
 
 ## 이야기(블로그)
 
+- [내 머릿결에 맞는 고데기 온도는 어떻게 찾나요?](https://parkhs8736-sys.github.io/ongo-beauty/story/find-right-straightener-temperature.html): 모발 굵기와 현재 상태를 함께 보고 해당 제품의 낮은 설정부터 온도를 찾는 방법
 - [10초 만에 200℃까지 올라가는 고데기는 어떻게 사용해야 하나요?](https://parkhs8736-sys.github.io/ongo-beauty/story/use-fast-heating-straightener.html): 빠른 예열과 사용 온도를 구분하고 마른 모발 준비부터 보관까지 확인하는 순서
 - [고데기 예열이 빠르면 아침 스타일링 시간이 얼마나 줄어드나요?](https://parkhs8736-sys.github.io/ongo-beauty/story/fast-preheat-morning-styling.html): 예열 대기 시간과 전체 손질 시간을 구분하고 공식 사양을 아침 루틴에 맞게 읽는 방법
 - [티타늄 코팅 고데기와 세라믹 코팅 고데기는 무엇이 다른가요?](https://parkhs8736-sys.github.io/ongo-beauty/story/titanium-vs-ceramic-straightener.html): 코팅별 공식 제품 설명과 온도 조절·플레이트 구조를 함께 비교하는 방법
