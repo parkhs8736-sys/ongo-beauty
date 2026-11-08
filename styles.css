@@ -593,6 +593,9 @@ p { max-width: 40ch; }
 .post-body ul { padding-left: 1.3rem; }
 .post-body li { margin-bottom: .75rem; }
 .post-body li::marker { color: var(--blue); }
+.post-body table { width: 100%; margin: 0 0 2rem; border-collapse: collapse; table-layout: fixed; font-size: .92rem; line-height: 1.65; }
+.post-body th, .post-body td { padding: .9rem .75rem; border-bottom: var(--line); text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.post-body thead th { color: var(--blue); font-weight: 700; }
 .post-faq, .post-sources { border-top: var(--line); padding-top: 1rem; }
 .post-faq details { border-bottom: var(--line); padding: 1.4rem 0; }
 .post-faq summary { position: relative; padding-right: 2rem; font-size: 1.02rem; font-weight: 800; cursor: pointer; list-style: none; }
